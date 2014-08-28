@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>设置页面</title>
+	<script src="jquery-2.0.0.min.js"></script>
+	<script src="settings.js"></script>
+	<script src="options.js"></script>
+	<style type="text/css">
+	body{
+		padding: 0 18%;
+	}
+
+	</style>
+</head>
+<body>
+<div>
+	设置交易密码:<input type="password" id="pw" value=""></input><br>
+	是否自动提交:
+	<input type="radio" name="isAutoRefash" value="no">否</input>
+	<input type="radio" name="isAutoRefash" value="yes" checked="checked">是</input><br>
+    是否自动打开新标:
+	<input type="radio" name="isAutoOpen" value="no">否</input>
+	<input type="radio" name="isAutoOpen" value="yes" checked="checked">是</input><br>
+	新标信息刷新时间:
+	<input type="text" id="reflash_time" value="3600000">毫秒(设置0时关闭刷新)</input>
+	<input type="button" id="saveSetting" value="保存" ></input>
+</div>
+</body>
+
+</html>

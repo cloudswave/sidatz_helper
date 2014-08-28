@@ -1,0 +1,33 @@
+﻿{
+	"manifest_version": 2,
+	"name": "四达抢标助手",
+	"version": "0.0.1",
+	"description":"四达抢标插件，自动填写提交表单。",
+	  "icons": {
+      "128": "icons/icon_128.png",
+      "16": "icons/icon_16.png",
+      "32": "icons/icon_32.png",
+      "48": "icons/icon_48.png"
+   },
+   "options_page": "options.html",
+	"background": { "scripts": ["jquery-2.0.0.min.js","settings.js", "background.js"] },
+	 "browser_action": {
+      "default_icon": "icons/icon_32.png",
+      "default_popup": "popup.html",
+      "default_title": "四达抢标助手"
+   },
+	"permissions" : ["tabs", "http://xlanlab.com/*","notifications"],
+	"content_scripts":[
+    {
+      "all_frames": true,
+      "matches": [ "https://www.sidatz.com/showproject2.aspx*" ],
+      "js":["jquery-2.0.0.min.js", "content_script.js"],
+      "run_at": "document_end"
+   },{
+      "all_frames": true,
+      "matches": [ "https://www.sidatz.com/investment.aspx*" ],
+      "js":["jquery-2.0.0.min.js", "index_content.js"],
+      "run_at": "document_end"
+   } ],
+   "web_accessible_resources": ["jquery-2.0.0.min.js","settings.js","icons/icon_48.png"]
+}
