@@ -70,8 +70,6 @@ function unlockTime(){
 
 function to_submit(){	
   document.getElementById('fast').click();
-  $("#tpwd").val(profiles!=undefined?profiles.pw:"05170621");
+  $("#tpwd").val(profiles!=undefined?profiles.pw:"88888888");
   document.getElementById('buybt').click();
 }
-
-
