@@ -90,8 +90,8 @@ function getData(){
 					articleData.content = msg.data.content;
 					var notification = webkitNotifications.createNotification(
 					  'icons/icon_48.png',  // 图标URL，可以是相对路径
-					  '有新标啦!',  // 通知标题
-					  '快去四达投资抢标吧！'  // 通知正文文本
+					  '新标提示',  // 通知标题
+					  msg.data.content  // 通知正文文本
 					);
 
 				    // 然后显示通知。

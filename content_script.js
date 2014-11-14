@@ -57,12 +57,15 @@ $("#to_submit").click(function(){
 var i=0;
 function unlockTime(){
 	var unlockTime=$("#times").html();
-	if(unlockTime=="0秒后解锁"){
-		clearInterval(interV);
-		if(i==0){
+	if(unlockTime=="0秒后解锁" && i<=2 || unlockTime=="2秒后解锁" && i==1 ||unlockTime=="3秒后解锁" && i==0){
+
+		if(unlockTime=="0秒后解锁" && i<=2){
+		   clearInterval(interV);
+        }
+		//if(i==0){
 		   to_submit();
 		   i++;
-		}
+		//}
 		
 	}
 }
