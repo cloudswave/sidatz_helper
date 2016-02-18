@@ -29,7 +29,8 @@ chrome.extension.onMessage.addListener(function(request, sender, sendResponse) {
 }); 
 //var Settings = extension.Settings;
 
-$("#fast").after("<input type='button' id='to_submit' value='一键提交'/>");
+$(".backgroundred").after("<input type='button' id='to_submit' value='一键提交'/>");
+$("#chosehb").click();//打开选红包
 // $("#fast").after("<input type='button' id='to_submit' value='一键提交'/>"
 // +"<script>"
 // 	+"$('#to_submit').click(function(){"
@@ -56,23 +57,29 @@ $("#to_submit").click(function(){
 
 var i=0;
 function unlockTime(){
-	var unlockTime=$("#times").html();
-	if(unlockTime=="0秒后解锁" && i<=2 || unlockTime=="2秒后解锁" && i==1 ||unlockTime=="3秒后解锁" && i==0){
-
-		if(unlockTime=="0秒后解锁" && i<=2){
-		   clearInterval(interV);
-        }
-		//if(i==0){
+	var unlockTime=$("#PostButtom").text();
+	console.log("unlockTime"+unlockTime);
+	if(unlockTime=="" && i<=2){
+		clearInterval(interV);
+    }
+	if(unlockTime=="立即购标" && i==0){
 		   to_submit();
 		   i++;
-		//}
 		
 	}
+
+	// if(unlockTime=="立即购标" && i<=2 || unlockTime=="2秒后开放" && i==1 ||unlockTime=="3秒后开放" && i==0){
+	// 	//if(i==0){
+	// 	   to_submit();
+	// 	   i++;
+	// 	//}
+		
+	// }
 }
 
 
 function to_submit(){	
-  document.getElementById('fast').click();
-  $("#tpwd").val(profiles!=undefined?profiles.pw:"88888888");
-  document.getElementById('buybt').click();
+  $(".backgroundred").click();
+  $("#TPassword").val(profiles!=undefined?profiles.pw:"88888888");
+  $(".BuyTarGet").click();
 }

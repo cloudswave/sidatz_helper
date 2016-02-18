@@ -87,11 +87,11 @@ function getData(){
 
 
 				} else {
-					articleData.content = msg.data.content;
+					articleData.content = msg.data;
 					var notification = webkitNotifications.createNotification(
 					  'icons/icon_48.png',  // 图标URL，可以是相对路径
 					  '新标提示',  // 通知标题
-					  msg.data.content  // 通知正文文本
+					  msg.data  // 通知正文文本
 					);
 
 				    // 然后显示通知。

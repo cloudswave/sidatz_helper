@@ -1,7 +1,7 @@
 ﻿{
 	"manifest_version": 2,
 	"name": "四达抢标助手",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description":"四达抢标插件，自动填写提交表单。",
 	  "icons": {
       "128": "icons/icon_128.png",
@@ -20,7 +20,7 @@
 	"content_scripts":[
     {
       "all_frames": true,
-      "matches": [ "https://www.sidatz.com/showproject2.aspx*" ],
+      "matches": [ "https://www.sidatz.com/showproject.aspx*" ],
       "js":["jquery-2.0.0.min.js", "content_script.js"],
       "run_at": "document_end"
    },{
