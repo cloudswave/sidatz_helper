@@ -21,12 +21,12 @@
     {
       "all_frames": true,
       "matches": [ "https://www.sidatz.com/showproject.aspx*" ],
-      "js":["jquery-2.0.0.min.js", "content_script.js"],
+      "js":["jquery-2.0.0.min.js","settings.js", "content_script.js"],
       "run_at": "document_end"
    },{
       "all_frames": true,
       "matches": [ "https://www.sidatz.com/investment.aspx*" ],
-      "js":["jquery-2.0.0.min.js", "index_content.js"],
+      "js":["jquery-2.0.0.min.js","index_content.js"],
       "run_at": "document_end"
    } ],
    "web_accessible_resources": ["jquery-2.0.0.min.js","settings.js","icons/icon_48.png"]
