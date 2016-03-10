@@ -3,7 +3,8 @@
 - 自动、手动一键提交抢标
 
 ##抢标插件使用说明
-> 用WebKit内核的浏览器如chrome、猎豹浏览器等，下载qb.crx安装即可:[插件下载地址][1]
+> 用WebKit内核的浏览器如chrome、猎豹浏览器等，下载qb.crx安装（注意勾选允许您的隐私页面）即可:[插件下载地址][1]
+ ![图片](https://dn-coding-net-production-pp.qbox.me/08724fbb-09fb-46e2-85ae-4e7fa30c1d38.png) 
 
 ##接口
 1. 邮件提醒接口：http://xlanlab.com/index.php?app=sidatz&mod=Index&act=checkNewTarget&send_mail=1&to_mails=111@qq.com|222@qq.com 
